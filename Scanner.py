@@ -6,7 +6,7 @@ scanner = nmap.PortScanner()
 ScanType = collections.namedtuple("ScanType", "proto args")
 scan_types = {
     1: ScanType(proto="tcp", args="-v -sS"),
-    2: ScanType(proto="udp", args="-v -sS"),
+    2: ScanType(proto="udp", args="-v -sU"),
     3: ScanType(proto="tcp", args="-v -sS -sV -sC -A -O")
 }
 
