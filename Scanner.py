@@ -22,9 +22,7 @@ resp = int(input("""\nPlease enter the type of scan you want to run
                 3)Comprehensive Scan \n"""))
 print("You have selected option: ", resp)
 
-if resp not in scan_types:
-    print("Please enter a valid option")
-else:
+if resp in scan_types:
     scan_type = scan_types[resp]
     "Nmap Version: ", scanner.nmap_version()
     scanner.scan(ip_addr, '1-1024', scan_type.args)
@@ -32,3 +30,5 @@ else:
     print("IP Status: ", scanner[ip_addr].state())
     print("Protocols: ", ", ".join(scanner[ip_addr].all_protocols()))
     print("Open Ports: ", ", ".join(str(p) for p in scanner[ip_addr][scan_type.proto].keys()))
+else:
+    print("Please enter a valid option")
