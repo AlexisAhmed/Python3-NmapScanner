@@ -1,2 +1,2 @@
 # Python3-NmapScanner
-Python3 Nmap Scanner
+Simple network scanner - built with Python3 and Nmap.
